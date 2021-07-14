@@ -1,38 +1,371 @@
-.App {
-  text-align: center;
-}
+* {
+  margin: 0;
+  padding: 0;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ header .MuiSvgIcon-root{
+  font-size:21px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.MuiSvgIcon-root{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.status-input .MuiSvgIcon-root{
+  border-radius: 100%;
+ font-size: 30px;
+ position: absolute;
+ right: 510px;
+ bottom: 160px;
+}
+ .palette>.MuiSvgIcon-root{
+  right: 590px;
+ 
+}
+textarea{
+  position: relative;
+
+}
+.logout-icon{
+  margin-left: 100px;
+  position: absolute;
+  right: 40px;
+}
+.logoutProfile{
+  display: flex;
+}
+.app {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  max-height: 100vh;
+  background-color: #18191a;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.viewDiv .timeDiv{
+  position: absolute;
+  left:20px;
+  top: 10px;
+  font-size: 14px;
+  color: #8f9194;
+}
+.app2 {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  width: 100vw;
+  max-height: 100vh;
+  background-color: #18191a;
+}
+aside {
+  width: 30%;
+  display: flex;
+  color: white;
+  flex-direction: column;
+}
+
+main {
+  width: 70%;
+  background: #1e2428;
+  display: flex;
+  flex-direction: column;
+  background-size: contain;
+}
+
+.chats {
+  flex: 1;
+  padding: 0 2rem;
+  overflow-y: auto;
+}
+
+.avatar {
+  height: 2rem;
+  border-radius: 50%;
+  margin: 0 0.75rem 0 0;
+}
+
+.search {
+  height: 2.75rem;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  padding: 0 0.75rem;
+}
+
+.search input[type='text'] {
+  background-repeat: no-repeat;
+  background-size: 1rem, 1rem;
+  
+  background-position: 0.45rem 0.35rem;
+  padding-left: 2rem;
+}
+.contact-boxes {
+  overflow-y: auto;
+  height: 100vh;
+  flex: 1;  
+}
+
+.contact-box {
+  background-color: #18191a;
+  padding: 1.5rem 0.75rem;
+  display: flex;
+  border-bottom: 1px solid rgb(51, 50, 50);
+  align-items: center;
+  cursor: pointer;
+}
+.contact-box:hover,
+.contact-box.active {
+  background: #4c535a;
+}
+
+main header,
+aside header {
+  margin-bottom: 20px;
+  background: #056162;
+  height: 3rem;
+  padding: 30px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main header {
+  justify-content: flex-start;
+  padding: 0 1rem;
+}
+
+.time-mark {
+  color: white;
+  font-size: 12px;
+}
+.text {
+  color: white;
+  font-size: 13px;
+}
+
+.avatar-title {
+  color: rgb(189, 180, 180);
+  font-size: 16px;
+  font-weight: normal;
+}
+.avatarText{
+  margin-left: 10px;
+}
+.avatar-component {
+  display: flex;
+  align-items: center;
+}
+.right-section {
+  width: 100%;
+}
+.contact-box-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+.icon-small {
+  width: 0.85rem;
+  margin: 0 0.25rem;
+}
+.last-msg {
+  display: flex;
+  align-items: flex-end;
+}
+.chat-input-box {
+  display: flex;
+  height: 3.5rem;
+  align-items: center;
+  background: #4b545a;
+  justify-content: space-between;
+}
+
+aside header {
+  padding: 0 0.75rem;
+   border-right: 1px solid #7c7676; 
+}
+
+.icon {
+  width: 0.75rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+#statusIcon {
+  width: 1.25rem;
+}
+input {
+  border: none;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.chat-input input {
+  height: 2rem;
+  
+  background-color: #6b7c88;
+}
+input:focus {
+  outline: none;
+}
+
+.emoji-selector {
+  width: 5%;
+  text-align: center;
+}
+.chat-input {
+  width: 90%;
+  
+}
+.chat-input input::placeholder{
+  color: #1e2428;
+}
+.send {
+  width: 5%;
+  text-align: center;
+}
+
+.message {
+  color: rgb(204, 197, 197);
+  clear: both;
+  line-height: 18px;
+  font-size: 17px;
+  padding: 8px;
+  position: relative;
+  margin: 8px 0;
+  max-width: 60%;
+  word-wrap: break-word;
+}
+
+.message::before {
+  position: absolute;
+  left: -10px;
+  top: 0;
+  content: '';
+  display: block;
+  border: solid;
+  border-width: 0px 16px 16px 0px;
+  border-color: transparent;
+  border-right-color: #424749;
+}
+.message.received {
+  background: #424749;
+  border-radius: 0px 5px 5px 5px;
+  float: left;
+}
+.message.sent::before {
+  left: auto;
+  right: -28px;
+  border-width: 0px 16px 16px 16px;
+  border-color: transparent;
+  border-left-color: #056162;
+  color: white;
+}
+
+.message.sent {
+  background: #056162;
+  border-radius: 5px 0px 5px 5px;
+  float: right;
+}
+
+.welcome {
+  background: #222F37;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.welcome h2 {
+  margin-top: 2rem;
+  font-weight: normal;
+  color: white !important;
+}
+.welcome img {
+  width: 300px;
+}
+
+.metadata {
+  float: right;
+  padding: 0 0 0 7px;
+  position: relative;
+  bottom: -4px;
+}
+
+.metadata .date {
+  color: rgb(158, 152, 152);
+  font-size: 11px;
+  display: inline-block;
+}
+.metadata .MuiSvgIcon-root{
+  font-size: 17px;
+  padding: 2px;
+  color: rgb(158, 152, 152);
+}
+.status-view{
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 100vh;
+  width: 70vw;
+  background-color: #243640;
+  color: white;
+}
+.viewDiv{
+  text-align: center;
+  margin-top: -100px;
+}
+.status-view h3{
+  font-size: 30px;
+  line-height: 57px;
+  word-wrap: break-word;
+}
+.statusdiv{
+   width: max-content;
+   width: 400px;
+  
+}
+.status-input{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+textarea{
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding:  160px;
+  border-radius: 20px;
+  font-size: 22px;
+  color: white;
+  -moz-appearance: none;
+}
+
+*:focus{
+  outline: 0;
+}
+textarea::placeholder{
+   font-size: 30px;
+   text-align: center;
+   line-height: 30px;
+}
+textarea::-moz-focus-outer{
+  display: none;
+}
+.textareaContainer{
+  margin: 20px auto;
+}
+@media only screen and (max-width: 600px){
+  main, aside{
+    width:50%;
+    font-size: 13px !important;
   }
-  to {
-    transform: rotate(360deg);
+  header .MuiSvgIcon-root{
+    font-size:14px;
+  }
+  .avatarText{
+  font-size: 13px;
   }
 }
